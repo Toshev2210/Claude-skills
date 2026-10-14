@@ -1,0 +1,4 @@
+Source: https://github.com/cloudflare/security-audit-skill
+Commit: c1c8a8c1471069fb0e188eeaff69b8e8db6564a8
+Installed: 2026-10-06 (manual copy of skills/security-audit, validators reviewed first)
+License: MIT (see repo)

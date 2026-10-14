@@ -23,19 +23,36 @@ git clone https://github.com/Toshev2210/Claude-skills.git "$env:USERPROFILE\.cla
 
 ## 3. Plugin marketplaces & plugins (`~/.claude/settings.json`)
 
-```powershell
+Installed on the Mac (as of 2026-10-14):
+
+| Plugin | Marketplace | Version |
+|---|---|---|
+| `superpowers` | `superpowers-dev` (obra/superpowers) | 6.1.1 |
+| `claude-mem` | `thedotmack` (thedotmack/claude-mem) | 13.10.1 |
+| `watch` | `claude-video` (bradautomates/claude-video) | 0.2.0 |
+| `code-review` | `claude-plugins-official` (anthropics/claude-plugins-official) | f359d43b4060 |
+| `frontend-design` | `claude-plugins-official` | f359d43b4060 |
+| `security-guidance` | `claude-plugins-official` | 2.0.13 |
+
+```bash
 claude plugin marketplace add obra/superpowers
 claude plugin marketplace add thedotmack/claude-mem
-# claude-code-plugins (anthropics/claude-code) is built in / added automatically
+claude plugin marketplace add bradautomates/claude-video
+# claude-plugins-official (anthropics/claude-plugins-official) is built in / added automatically
 
 claude plugin install superpowers@superpowers-dev
-claude plugin install code-review@claude-code-plugins
-claude plugin install frontend-design@claude-code-plugins
-claude plugin install security-guidance@claude-code-plugins
 claude plugin install claude-mem@thedotmack
+claude plugin install watch@claude-video
+claude plugin install code-review@claude-plugins-official
+claude plugin install frontend-design@claude-plugins-official
+claude plugin install security-guidance@claude-plugins-official
 ```
 
 This recreates the `enabledPlugins` / `extraKnownMarketplaces` block in `~/.claude/settings.json`.
+
+`watch` needs `GROQ_API_KEY` (preferred) or `OPENAI_API_KEY` in `~/.config/watch/.env` for the Whisper fallback on videos without captions.
+
+Note: the commands in this guide were written on Windows (PowerShell). On macOS use Homebrew (`brew install node python gh`) instead of `winget`.
 
 ## 4. MCP servers (`~/.claude.json` -> top-level `mcpServers`)
 
