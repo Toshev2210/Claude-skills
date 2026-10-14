@@ -1,6 +1,6 @@
 # Machine Setup — Replicating this Claude Code environment
 
-This repo (`~/.claude/skills`) covers skills, plugins reference, and Cowork scheduled-task templates.
+This repo (`~/.claude/skills`) covers skills and a plugins reference.
 The pieces below are **not** in git (machine config / secrets) and must be set up manually on a new device.
 
 ## 1. Prerequisites
@@ -68,13 +68,11 @@ claude mcp add nano-banana --scope user --env GEMINI_API_KEY="<gemini-api-key>" 
 
 ## 5. Cowork scheduled tasks
 
-Templates are in `cowork-scheduled-tasks/`. Open Cowork on the new device → Scheduled Tasks → recreate
-`daily-morning-briefing` and `weekly-briefing` using those SKILL.md files as the task instructions.
-(`trade-alert-2026-06-12` was intentionally excluded — private one-off alert.)
+Not stored in this repo (personal). Recreate them manually in Cowork → Scheduled Tasks.
 
 ## 6. Connectors (Google Calendar, Gmail, Drive, etc.)
 
-Nothing to do — these are tied to your Anthropic account (vladimirtoshev09@gmail.com), not the device.
+Nothing to do — these are tied to your Anthropic account, not the device.
 They'll already be available once you sign in.
 
 ## 7. Verify
